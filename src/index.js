@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import * as Regex from "./regex";
+import './styles.css';
 class Url extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +13,7 @@ class Url extends Component {
    * This method is used for handle input change
    * @param {*} event
    */
+  
   handleInput(event) {
     this.setState(
       {
@@ -37,7 +39,6 @@ class Url extends Component {
   handleBlur(event) {
     let isError = false;
     if (this.props.value !== "") {
-      debugger;
       let regex = "";
       switch (this.props.urltype) {
         case "facebook":

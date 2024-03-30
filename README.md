@@ -45,41 +45,47 @@ import React ,{ Component } from 'react';
 import UrlComponent from 'react-weblineindia-url'
 
 class Test extends Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       vData: "",
-      isInvalidUrl:false
+      isInvalidUrl: false
     };
-    onChange(event ,isError){
-      this.setState({
-        vData : event.target.value,
-        isInvalidUrl:isError
-      })
-    }
-   onBlur(event ,isError){
-     this.setState({
-       isInvalidUrl : isError
-     })
   }
-    render(){
+
+  onChange(event, isError) {
+    this.setState({
+      vData: event.target.value,
+      isInvalidUrl: isError
+    });
+  }
+
+  onBlur(event, isError) {
+    this.setState({
+      isInvalidUrl: isError
+    });
+  }
+
+  render() {
     return (
       <div>
-        <UrlComponent
-          value ={this.state.vData}
+        <Url
+          value={this.state.vData}
           onChange={this.onChange.bind(this)}
           onBlur={this.onBlur.bind(this)}
-          placeholder ="Enter Url"
-
+          placeholder="Enter Url"
         />
-        {this.state.isInvalidUrl ?
-        <div className="error-text">
-          The url is not valid
-        </div>
-        :""}
+        {this.state.isInvalidUrl ? (
+          <div className="error-text">
+            The URL is not valid
+          </div>
+        ) : ""}
       </div>
-    )}
+    );
+  }
 }
+
+export default Test;
 ```
 
 ## Available Props
