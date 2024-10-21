@@ -1,6 +1,6 @@
 {
   "name": "react-weblineindia-url",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A ReactJS based URL component provides option to add url (like Instagram url, Facebook url, web url, etc.) with validation. The URL value is automatically validated on blur event. You can even disable url field using disable props.",
   "author": "weblineindia",
   "license": "MIT",
